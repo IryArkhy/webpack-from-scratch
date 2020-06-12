@@ -1,5 +1,5 @@
 import { red, blue } from './button-styles'
-import './css/footer.css'; //this is a side effect (side-effecty import). You don't wanna do this usually but with css you can get away with it.
+
 
 export const top = document.createElement('div');
 top.innerText = 'Top of footer';
