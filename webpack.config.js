@@ -4,6 +4,7 @@ const webpackMerge = require("webpack-merge");
 const modeConfig = env => require(`./build-utils/webpack.${env}`)(env);// function returns 'require' which returns a function that you can call
 
 module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
+    const presetConfig = require('./build-utils/loadPresets');
     return webpackMerge(
         {
             mode,
@@ -24,6 +25,7 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
             },
             plugins: [new HtmlWebpackPlugin(), new webpack.ProgressPlugin()]
         },
-        modeConfig(mode)
+        modeConfig(mode),
+        presetConfig({ mode, presets })
     );
 };

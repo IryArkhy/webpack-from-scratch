@@ -3,6 +3,7 @@ import { footer } from "./footer";
 import makeButton from "./button";
 import { red, makeColor } from "./button-styles";
 import makeImage from "./image";
+import Foo from './foo.ts';
 import imageURL from './cat.jpeg';
 import './css/footer.css';
 
