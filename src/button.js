@@ -1,8 +1,15 @@
 /**
  *
  * @param {string} btnName
- * @returns {string}
+ * @returns {Element}
  */
 
-const makeButton = (btnName) => `Button ${btnName}`;
+// const makeButton = (btnName) => `Button ${btnName}`;
+
+const makeButton = buttonName => {
+    const buttonLabel = `Button: ${buttonName}`;
+    const button = document.createElement("button");
+    button.innerText = buttonLabel;
+    return button;
+};
 module.exports = makeButton;
